@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HayatsCodes'Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            height: 400px;
+            background: url('https://i.imgur.com/TrwpvSq.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+            border: 10px white solid;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        h1 {
+          font-size: 70px;
+          color:white;
+          margin-top: 40px;
+        }
+        
+        ul {
+          background: rgba(0, 0, 0, 0.5);
+          padding: 10px;
+          margin-top: 40px
+        }
+        
+        li {
+          display: inline;
+          margin-right: 10px;
+        }
+        
+        a, li {
+          color: white;
+        }
+        
+        article {
+          max-width: 500px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        p {
+          font-size: 20px
+        }
+        
+        button {
+          padding: 10px;
+          border: none;
+          cursor: pointer;
+          border-radius: 10px;
+        }
+        
+        @media (max-width: 500px) {
+          h1 {
+            font-size: 35px
+          }
+          
+          li {
+            display: block;
+            margin-right: 0;
+
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png" alt="Code Logo">
+        <h1> HayatsCodes' Blog </h1>
+        <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Best Projects</a></li>
+            <li><a href="#">Worst Projects</a></li>
+        </ul>
+    </header>
+    <article>
+        <h2>VHS umami pop-up trust fund</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque placeat repellat vel blanditiis harum veritatis soluta debitis, iste quisquam eum veniam excepturi, ab rem? Ratione alias optio quas cumque a.
+        </p>
+        <button>Like</button>
+    </article>
+
+    <article>
+        <h2>Sartorial synth Echo Park, roof party</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque placeat repellat vel blanditiis harum veritatis soluta debitis, iste quisquam eum veniam excepturi, ab rem? Ratione alias optio quas cumque a.
+        </p>
+        <button>Like</button>
+    </article>
+    <article>
+        <h2>Forage food truck keytar master cleanse</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque placeat repellat vel blanditiis harum veritatis soluta debitis, iste quisquam eum veniam excepturi, ab rem? Ratione alias optio quas cumque a.
+        </p>
+        <button>Like</button>
+    </article>
+    
+    <script>
+       $("button").on("click", function() {
+      $(this).css("background-color", "red");
+    });
+    </script>
+</body>
+</html>
