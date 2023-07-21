@@ -135,7 +135,7 @@
 
         <div class="container container-img-3">
             <p>
-                <span class="bite-name">Pizza Burger</span> <span class="price">$10</span><br>
+                <span class="bite-name">Pizza Burger</span><span class="price">$10</span><br>
                 <small>Velit quae, cumque dignissimos voluptates magni vel dolor tempore modi nesciunt, ea incidunt
                     quibusdam est eum laborum unde. Ipsum dolor sit amet consectetur adipisicing elit.</small>
             </p>
@@ -145,15 +145,17 @@
     <script>
         // Get the parent container that holds all the div elements
         const container = document.querySelector('.main-container');
-
+      
         // Add a click event listener to the container using event delegation
         container.addEventListener('click', function (event) {
-            // Toggle the class 'active' on the clicked div
+          // Check if the clicked element is a paragraph ('P') element
+          if (event.target.classList.contains('container')) {
+            // Toggle the class 'show-description' on the clicked div
             event.target.classList.toggle('show-description');
+          }
         });
-    </script>
-
-    </script>
+      </script>
+      
 </body>
 
 </html>
