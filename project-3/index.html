@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Narnoor&display=swap" rel="stylesheet">
+    <title>Ummu Umama's Yum Stop</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 42, 22);
+        }
+
+        .header {
+            max-width: 700px;
+            /* border: 1px solid white; */
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: rgb(133, 255, 182);
+            /* text-align: center; */
+            font-size: 75px;
+            font-family: 'Patrick Hand SC', cursive;
+            text-align: right;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: rgb(133, 255, 202);
+            text-align: right;
+            margin-top: -65px;
+            font-family: 'Patrick Hand SC', cursive;
+            font-size: 24px;
+        }
+
+        .container {
+            border-radius: 12px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .container-img-1 {
+            background: url('https://lede-admin.hellgatenyc.com/wp-content/uploads/sites/43/2023/03/akara-13.jpg');
+            background-size: cover;
+            max-width: 700px;
+            height: 400px;
+            background-position: center;
+        }
+
+        .container-img-2 {
+            background: url('https://cdn3.didevelop.com/public/product_images/2805/533_f6d25d5ff88f2cec931cd069c72d6e44.jpg');
+            background-size: 700px 450px;
+            background-repeat: no-repeat;
+            max-width: 700px;
+            height: 400px;
+            background-position: center;
+        }
+
+        .container-img-3 {
+            background: url('https://img.cuisineaz.com/660x660/2021/06/24/i179313-4-pizza-burger.jpeg');
+            background-size: cover;
+            max-width: 700px;
+            height: 400px;
+            background-position: center;
+        }
+
+        p {
+            font-size: 30px;
+            background: rgba(133, 255, 202, 0.4);
+            margin: 0;
+            line-height: 28px;
+            height: 30px;
+            text-align: justify;
+            color: rgb(1, 35, 20);
+            padding: 18px;
+            font-family: 'Narnoor', serif;
+            position: absolute;
+            bottom: 0;
+            border-radius: 12px;
+        }
+
+        .show-description p {
+            height: 150px;
+        }
+
+        .show-description small {
+            opacity: 1;
+        }
+
+        .price {
+            position: absolute;
+            right: 10px;
+        }
+
+        .bite-name,
+        .price {
+            font-weight: bold;
+        }
+
+        small {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Ummu Umama's Yum Stop</h1>
+        <h2>Yummy Bites, On the Go</h2>
+    </div>
+    <div class="main-container">
+        <div class="container container-img-1">
+            <p>
+                <span class="bite-name">Akara Burger</span> <span class="price">$5</span><br>
+
+                <small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut
+                    spring onion summer purslane asparagus lentil.</small>
+            </p>
+        </div>
+
+        <div class="container container-img-2">
+            <p>
+                <span class="bite-name">Chicken Shawarma Burger</span> <span class="price">$7</span><br>
+
+                <small>Tagni ducimus repellat soluta explicabo, perspiciatis molestias dicta minima tempore, voluptatem
+                    error sequi
+                    commodi blanditiis aliquid corporis officiis.</small>
+            </p>
+        </div>
+
+        <div class="container container-img-3">
+            <p>
+                <span class="bite-name">Pizza Burger</span> <span class="price">$10</span><br>
+                <small>Velit quae, cumque dignissimos voluptates magni vel dolor tempore modi nesciunt, ea incidunt
+                    quibusdam est eum laborum unde. Ipsum dolor sit amet consectetur adipisicing elit.</small>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Get the parent container that holds all the div elements
+        const container = document.querySelector('.main-container');
+
+        // Add a click event listener to the container using event delegation
+        container.addEventListener('click', function (event) {
+            // Toggle the class 'active' on the clicked div
+            event.target.classList.toggle('show-description');
+        });
+    </script>
+
+    </script>
+</body>
+
+</html>
