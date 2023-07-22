@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Narnoor&display=swap" rel="stylesheet">
+    <script src="/assets/jquery.js"></script>
     <title>Ummu Umama's Yum Stop</title>
 
     <style>
@@ -42,6 +43,7 @@
             margin: 0 auto;
             margin-bottom: 20px;
             position: relative;
+            cursor: pointer;
         }
 
         .container-img-1 {
@@ -82,6 +84,7 @@
             position: absolute;
             bottom: 0;
             border-radius: 12px;
+            transition: height 0.5s;
         }
 
         .show-description p {
@@ -104,6 +107,36 @@
 
         small {
             opacity: 0;
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 40px;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 16px;
+                margin-top: -35px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .container-img-1, .container-img-2, .container-img-3 {
+                max-width: 600px;
+            }
+
+            .container {
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .container-img-2 {
+                background-size: cover;
+            }
         }
     </style>
 </head>
@@ -143,18 +176,17 @@
     </div>
 
     <script>
-        // Get the parent container that holds all the div elements
-        const container = document.querySelector('.main-container');
+  $(document).ready(function() {
+    // Get the parent container that holds all the div elements
+    const container = $('.main-container');
       
-        // Add a click event listener to the container using event delegation
-        container.addEventListener('click', function (event) {
-          // Check if the clicked element is a paragraph ('P') element
-          if (event.target.classList.contains('container')) {
-            // Toggle the class 'show-description' on the clicked div
-            event.target.classList.toggle('show-description');
-          }
-        });
-      </script>
+    // Add a click event listener to the container using event delegation
+    container.on('click', '.container', function(event) {
+      // Toggle the class 'show-description' on the clicked div
+      $(this).toggleClass('show-description');
+    });
+  });
+</script>
       
 </body>
 
